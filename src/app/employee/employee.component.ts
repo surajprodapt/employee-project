@@ -22,6 +22,18 @@ export class EmployeeComponent implements OnInit {
       this.employees=this.employees.filter(t=>t.id !==emp.id)
     ));
   }
+  onToggleProject(emp:Employee){
+    emp.project = !emp.project;
+    this.employeesServices
+    .updateEmployeeProject(emp)
+    .subscribe()
+  }
+  addEmployee(emp:Employee){
+    this.employeesServices
+        .addEmployee(emp)
+        .subscribe((emp)=>(this.employees.push(emp)))
+
+  }
  
 
   }

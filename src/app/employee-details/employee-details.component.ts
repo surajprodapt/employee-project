@@ -14,14 +14,19 @@ export class EmployeeDetailsComponent implements OnInit {
   @Input() emp?:Employee;
 
   @Output() onDeleteEmp:EventEmitter<Employee>=new EventEmitter();
+  @Output() onToggleProjectEmp:EventEmitter<Employee>=new EventEmitter();
 
 
   constructor() { }
   onDelete(emp:Employee){
     this.onDeleteEmp.emit(emp)
   }
+  onToggle(emp:Employee){
+    this.onToggleProjectEmp.emit(emp);
+  }
 
   ngOnInit(): void {
   }
+
 
 }

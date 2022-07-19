@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { UiService } from '../services/ui.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +10,26 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   title="Employee Datatbase";
 
-  constructor() { }
+  showAddEmployee:boolean=false;
+  subscription?:Subscription;
+
+
+  constructor(
+    private uiService: UiService){
+     
+    this.subscription = this.uiService
+                          .ontoggle()
+                          .subscribe(
+                            (value) => (this.showAddEmployee = value)
+                          )
+  }
+  toggleEmployee(){
+    
+    this.uiService.toggleAddEmployee();
+  }
 
   ngOnInit(): void {
   }
-  action(){
-    console.log("here");
-  }
+ 
 
 }

@@ -1,5 +1,7 @@
-<app-add-employee-details></app-add-employee-details>
+<app-add-employee-details (onAddEmployee)="addEmployee($event)"></app-add-employee-details>
 <app-employee-details *ngFor="let emp of employees"
 [emp]="emp"
-(onDeleteEmp)="deleteEmp(emp)">
+(onDeleteEmp)="deleteEmp(emp)"
+(onToggleProjectEmp)="onToggleProject(emp)">
+(onAdd)
 </app-employee-details>

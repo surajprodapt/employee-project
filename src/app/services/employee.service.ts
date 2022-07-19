@@ -29,6 +29,14 @@ export class EmployeeService {
   
 
   }
+  updateEmployeeProject(emp:Employee):Observable<Employee>{
+    const url=`${this.empUrl}/${emp.id}`;
+    return this.http.put<Employee>(url,emp,httpOptions);
+  }
+
+  addEmployee(emp:Employee):Observable<Employee>{
+    return this.http.post<Employee>(this.empUrl,emp,httpOptions);
+  }
 
   }
 
