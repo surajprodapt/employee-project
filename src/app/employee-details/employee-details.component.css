@@ -1,0 +1,13 @@
+.empclass{
+        background-color: bisque;
+        margin: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    
+    }
+   
+    .empclass h3{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }

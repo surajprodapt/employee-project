@@ -1,0 +1,5 @@
+<app-add-employee-details></app-add-employee-details>
+<app-employee-details *ngFor="let emp of employees"
+[emp]="emp"
+(onDeleteEmp)="deleteEmp(emp)">
+</app-employee-details>

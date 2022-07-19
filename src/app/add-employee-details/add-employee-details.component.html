@@ -1,0 +1,25 @@
+<form class="form-control add-form">
+    <div class="form-control"> 
+    <label for="name">Name</label>
+    <input type="text" [(ngModel)]="name" name="name" id="name" placeholder="Enter employee name">
+    </div>
+    <div class="form-control"> 
+        <label for="email">Email</label>
+        <input type="text" [(ngModel)]="email" name="email" id="email" placeholder="Enter employee email">
+    </div>
+    <div class="form-control"> 
+        <label for="pnumber">Phone Number</label>
+        <input type="number" [(ngModel)]="pnumber" name="pnumber" id="pnumber" placeholder="Enter employee Phone number">
+    </div>
+    <div class="form-control"> 
+        <label for="profession">Profession</label>
+        <input type="text" [(ngModel)]="profession" name="profession" id="profession" placeholder="Enter employee profession">
+    </div>
+    <div class="form-control form-control-check"> 
+        <label for="reminder">Project Reminder</label>
+        <input type="checkbox" [(ngModel)]="reminder" name="reminder" id="reminder" >
+    </div>
+
+    <input type="submit" value="Save Data" class="btn-block" >
+    
+</form>
